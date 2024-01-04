@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout
 
       - name: Install packages
         run: npm ci
@@ -19,7 +19,7 @@ jobs:
         run: npm run build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action
         with:
           branch: gh-pages
           folder: dist
